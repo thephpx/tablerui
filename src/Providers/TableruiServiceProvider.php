@@ -25,8 +25,8 @@ class TableruiServiceProvider extends ServiceProvider
     $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
     # Publish assets
-    // $this->publishes([
-    //   __DIR__.'/../../config/dummy.php' => config_path('dummy.php'),
-    // ], 'config');
+    $this->publishes([
+      __DIR__.'/../../public/assets/tablerui/' => public_path('assets/tablerui/'),
+    ], 'tablerui-assets');
   }
 }
