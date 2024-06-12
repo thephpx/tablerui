@@ -7,9 +7,6 @@
   <title>@if(isset($data['page'])){{$data['page']['title']}}@endif</title>
   <!-- CSS files -->
   <link href="{{ asset('assets/tablerui/css/tabler.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/tablerui/css/tabler-flags.min') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/tablerui/css/tabler-payments.min') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/tablerui/css/tabler-vendors.min') }}" rel="stylesheet" />
   <style>
     @import url('https://rsms.me/inter/inter.css');
 
@@ -30,6 +27,10 @@
 
   </div>
   <!-- Tabler Core -->
-  <script src="{{ asset('assets/tablerui/js/tabler.min.js') }}" defer></script>
+  <link href="{{ asset('assets/tablerui/css/tabler-flags.min') }}" rel="stylesheet" />
+  <link href="{{ asset('assets/tablerui/css/tabler-payments.min') }}" rel="stylesheet" />
+  <link href="{{ asset('assets/tablerui/css/tabler-vendors.min') }}" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet" />
+  <script src="{{ asset('assets/tablerui/js/tabler.min.js') }}" defer></script> 
 </body>
 </html>
