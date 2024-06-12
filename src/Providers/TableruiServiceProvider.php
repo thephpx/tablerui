@@ -24,9 +24,22 @@ class TableruiServiceProvider extends ServiceProvider
     # Load migration tables
     $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
+    # Load config
+    $this->mergeConfigFrom(__DIR__.'/../../config/config.php', 'Tablerui');
+
     # Publish assets
     $this->publishes([
       __DIR__.'/../../public/assets/tablerui/' => public_path('assets/tablerui/'),
     ], 'tablerui-assets');
+
+    # Register package
+    $packages = \Illuminate\Support\Facades\Session::get('packages');
+    if(empty($packages)){
+      $packages = [];
+    }
+
+    $packages[] = 'thephpx/tablerui';
+
+    \Illuminate\Support\Facades\Session::put('packages', $packages);
   }
 }
